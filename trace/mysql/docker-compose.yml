@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  mysql:
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_ROO _PASSWORD: 'changes' #  ODO: Change this
+      MYSQL_USER: 'adm'
+      MYSQL_PASSWORD: 'changes'
+    ports:
+      - "3306:3306"
+    volumes:
+      - my-datavolume:/var/lib/mysql
+volumes:
+  my-datavolume:
